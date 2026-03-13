@@ -1,6 +1,7 @@
 import React, {useState} from "react"
 import {GlobalStyles, Primary  } from './Layout.styles'
 import Header from '../Header/Header'
+import Hero from '../Hero/Hero'
 import Hamburger from "../Hamburger/Hamburger"
 import OverlayMenu from "../OverlayMenu/OverlayMenu"
 import Footer from '../Footer/Footer'
@@ -15,8 +16,9 @@ const Layout=({children})=> {
         
         <GlobalStyles />
          <Hamburger handleOverlayMenu={handleOverlayMenu}/>
-         <OverlayMenu menuOpen={menuOpen}></OverlayMenu>
+         <OverlayMenu menuOpen={menuOpen} callback={{handleOverlayMenu}}></OverlayMenu>
          <Header/>
+         <Hero/>
          <Primary>This is Primary</Primary>
         <Footer> this is footer </Footer>
         </>

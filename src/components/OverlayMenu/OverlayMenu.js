@@ -9,7 +9,7 @@ const OverlayMenu=({menuOpen, callback})=>{
     const {menu} = useMenuQuery();
 
     return (
-        <Overlay menuOpen>
+        <Overlay menuOpen={menuOpen}>
             <div className='inner'>
                 <img className ="invertedLogo" src={InvertedLogo} alt="white-logo" />
                 <ul className='overlayMenu'>
@@ -23,13 +23,14 @@ const OverlayMenu=({menuOpen, callback})=>{
                         ) :null
                     ))}
                 </ul>
-                <div 
+                <div  
                     className='closeButton'
                     onClick={callback}
                     role="button"
-                    tabIndex="0">
+                    tabIndex="0"
+                    onKeyDown={callback}>
                         <img src={CloseButton} alt="close-button"/>
-                </div>      
+                </div>    
             </div>
         </Overlay>
     )
