@@ -3,7 +3,7 @@ import {Wrapper} from './Footer.styles'
 
 const Footer=()=> (
     <Wrapper>        
-        <p>Lorem  ipsum dolor sit amet</p>
+        <p>Ini Footer</p>
     </Wrapper>
 
 )

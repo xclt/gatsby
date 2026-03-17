@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../cakeit"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "wpbackend"
+	}
+}

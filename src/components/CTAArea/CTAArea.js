@@ -1,16 +1,16 @@
 import React from "react";
 import { useCTAAreaQuery } from "../../hooks/useCTAAreaQuery";
-import { CTAImageTextWrapper } from "../CTA/CTAArea.styles";
-import CTA from "./CTA";
+import { Wrapper } from "./CTAArea.styles";
+import CtaComponent from "../CtaComponent/CtaComponent";
 
 const CTAArea = () => {
-    const {cta}= useCTAAreaQuery()
-    console.log(cta)
-
+    console.log("hello") 
+    const {cta}= useCTAAreaQuery() 
+ console.log(cta)
     return (
-        <CTAImageTextWrapper>
+        <Wrapper>
             {new Array(3).fill("").map((element, i) => (
-                <CTA
+                <CtaComponent
                     key={i}
                     image={cta.ACF_HomePage[`cta${i + 1}Image`].localFile.childImageSharp.gatsbyImageData}
                     text={cta.ACF_HomePage[`cta${i + 1}Text`]}
@@ -20,7 +20,7 @@ const CTAArea = () => {
             ))
 
             }
-        </CTAImageTextWrapper>
+        </Wrapper>
     )}
 
     export default CTAArea

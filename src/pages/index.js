@@ -1,13 +1,13 @@
 import * as React from "react"
 
 import Layout from "../components/Layout/Layout"
-import SEO from "../components/SEO/SEO"
+import SeoComponent from "../components/SeoComponent/SeoComponent"
 import Hero from '../components/Hero/Hero'
 import CTAArea from "../components/CTAArea/CTAArea"
 
 const IndexPage = () => (
   <Layout>
-      <SEO title="Home"/>
+      <SeoComponent title="HomeCakeit"/>
       <Hero/>
       <CTAArea/>
   </Layout>

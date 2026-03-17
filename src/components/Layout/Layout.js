@@ -20,7 +20,7 @@ const Layout=({children})=> {
          <Header/>
          <Hero/>
          <Primary>This is Primary</Primary>
-        <Footer> this is footer </Footer>
+        <Footer/>
         </>
     )
 

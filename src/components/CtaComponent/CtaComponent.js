@@ -1,9 +1,9 @@
 import React from "react"
 import {Link} from 'gatsby'
-import { StyledImg,CTAImageTextWrapper, CTAImage, CTAImageText } from "./CTA.styles";
+import { StyledImg,CTAImage,CTAImageTextWrapper,  CTAImageText } from "./CtaComponent.style.js";
 
 
-const CTA = ({image, text, link}) => (
+const CtaComponent = ({image, text, link}) => (
     <CTAImage>
         <StyledImg image={image} alt={text} />
         <Link to={link}>
@@ -14,4 +14,4 @@ const CTA = ({image, text, link}) => (
     </CTAImage>
 )
 
- export default CTA
+ export default CtaComponent

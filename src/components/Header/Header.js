@@ -8,7 +8,6 @@ import {Wrapper, Content}from './Header.styles'
 
 const Header =() =>{
     const {site,menu} = useMenuQuery()
-    console.log(menu)
     return(
         <Wrapper>
             <Content>
