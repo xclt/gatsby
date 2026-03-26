@@ -1,0 +1,28 @@
+import React from "react";
+import { Link } from "gatsby";
+import { useLatestBlogPost } from "../../hooks/useLatestBlogPost";
+import { Wrapper } from "../LatestBlogPost/LatesBlogPost.styles"
+
+
+const LatestBlogPost =()=>{
+    const data = useLatestBlogPost()
+
+    return (
+        <Wrapper>
+            <h1>LatesBlogPost</h1>
+            <h4>{data.allWpPost.edges[0].node.title}</h4>
+            <div
+            
+                dangerouslySetInnerHTML={{
+                    __html: data.allWpPost.edges[0].node.excerpt
+                }}>
+            </div>
+            <Link to={`/blog${data.allWpPost.edges[0].node.uri}`}>
+                <h5>Read More</h5>
+            </Link>
+
+        </Wrapper>
+    )
+}
+
+export default LatestBlogPost

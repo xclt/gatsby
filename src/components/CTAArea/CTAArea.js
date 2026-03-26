@@ -3,10 +3,10 @@ import { useCTAAreaQuery } from "../../hooks/useCTAAreaQuery";
 import { Wrapper } from "./CTAArea.styles";
 import CtaComponent from "../CtaComponent/CtaComponent";
 
+ 
 const CTAArea = () => {
-    console.log("hello") 
     const {cta}= useCTAAreaQuery() 
- console.log(cta)
+ 
     return (
         <Wrapper>
             {new Array(3).fill("").map((element, i) => (
@@ -21,6 +21,7 @@ const CTAArea = () => {
 
             }
         </Wrapper>
-    )}
+    )
+}
 
     export default CTAArea
