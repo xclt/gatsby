@@ -1,4 +1,6 @@
 import React from 'react'
+
+
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import Layout from '../components/Layout/Layout'
@@ -25,14 +27,14 @@ const PageContent = styled.article`
 const PageTemplate =({data}) => (
     
     <Layout>
-       {data.wpPage.featuredImage ? (
+     
+      <Wrapper>  {data.wpPage.featuredImage ? (
         <PageHero img={
             data.wpPage.featuredImage.node.localFile.childImageSharp
             .gatsbyImageData
         } />
        ): null
     }
-      <Wrapper>
         
           <BreadCrumb parent={data.wpPage.wpParent && data.wpPage.wpParent.node} />
            <ContentWrapper>
